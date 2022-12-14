@@ -1,0 +1,18 @@
+:root {
+  --accent: #073a46;
+  --accent-back: #d6e2fa;
+  --accent-text: #000c1c;
+  --text-light: #d7e8eb;
+  --text-dark: #022121;
+  --back-light: #ffffff;
+  --back-dark: #415772;
+}
+body {
+  background: linear-gradient(#8ca3d5, #9ff0f3);
+  background-attachment: fixed;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 1.5;
+}
+x-nav {
+  box-shadow: 0 0.25em 0.5em -0.25em var(--back-dark);
+}

@@ -1,0 +1,5 @@
+- [x] Write ACME 4.0.0
+- [x] Deploy ACME on Khan Academy
+- [ ] Setup Github account & launch ACME's repo
+- [ ] Write documentation pages
+- [ ] Find Bigfoot

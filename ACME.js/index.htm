@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>ACME.js - Homepage</title>
+    <link rel = "stylesheet" href = "assets/framework.css" />
+    <link rel = "stylesheet" href = "assets/main.css" />
+    <link rel = "icon" href = "assets/icon.png" />
+    <style>
+      @keyframes fadein {
+        0%, 50%{
+          background: transparent;
+          opacity: 0;
+        }
+        100% {
+          background: #eefa;
+          opacity: 1;
+        }
+      }
+      #header {
+        overflow: hidden;
+        position: relative;
+      }
+      #vid, #title {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        border: none;
+      }
+      #vid {
+        background-color: #000;
+      }
+      #title {
+        background: #effd;
+        opacity: 1;
+        animation: fadein ease-out 2s;
+      }
+
+    </style>
+
+    <script src = "assets/framework.js"></script>
+    <script>
+      window.Framework.load({
+        "nav-links": [
+          {
+            "type": "link",
+            "name": "About",
+            "href": "about/index.htm"
+          },
+          {
+            "type": "link",
+            "name": "Usage",
+            "href": "usage/index.htm"
+          },
+          {
+            "type": "dropdown",
+            "name": "Documentation",
+            "href": "docs/index.htm",
+            "content": [
+              {
+                "type": "link",
+                "name": "The ACME interface",
+                "href": "docs/acme/index.htm"
+              },
+              {
+                "type": "link",
+                "name": "The Game object",
+                "href": "docs/game/index.htm"
+              },
+              {
+                "type": "link",
+                "name": "The RuleSheet object",
+                "href": "docs/rulesheet/index.htm"
+              },
+              {
+                "type": "link",
+                "name": "The Component object",
+                "href": "docs/component/index.htm"
+              },
+              {
+                "type": "link",
+                "name": "The Camera object",
+                "href": "docs/camera/index.htm"
+              },
+              {
+                "type": "link",
+                "name": "Best practices",
+                "href": "docs/bests/index.htm"
+              }
+            ]
+          },
+          {
+            "type": "dropdown",
+            "name": "Module Reference" ,
+            "href": "modules/index.htm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Raycasting",
+                "href": "modules/raycasting/index.htm",
+                "disabled": true,
+              }
+            ]
+          }
+        ],
+        "foot-links": [
+          {
+            "type": "link",
+            "name": "about",
+            "href": "about.index.htm"
+          },
+          {
+            "type": "link",
+            "name": "License information",
+            "href": "legal/index.htm",
+          },
+          {
+            "type": "link",
+            "name": "Contact",
+            "href": "contact.htm"
+          }
+        ]
+      });
+    </script>
+  </head>
+  <body>
+    <x-page>
+      <x-full-panel id = "header">
+        <div id = "vid"></div>
+        <x-centered id = "title">
+          <img src = "assets/logo.png" width = "50%" alt = "ACME.js"/>
+          <x-descr>
+            <p>The Axis-aligned Collision Management Engine</p>
+          </x-descr>
+        </x-centered>
+      </x-full-panel>
+
+      <!-- Auo-generate content-->
+      <x-nav></x-nav>
+
+      <x-panel>
+        <x-title>
+          <h1>About</h1>
+          <x-breadcrumb>
+            <a href = "about.htm">Read more ...</a>
+          </x-breadcrumb>
+        </x-title>
+        <x-descr>
+          <p>The ACME project was initiated in October of 2020, during a brief burst of creativity.  Over the next two years, it was refined and optimized.  From the start, ACME has had the beginning game developer in mind.  Now, ACME.js is the number one choice by senior game dev Bill E. Cyote...</p>
+        </x-descr>
+      </x-panel>
+      <x-panel>
+        <x-title>
+          <h1>Usage</h1>
+          <x-breadcrumb>
+            <a href = "usage.htm">Read more ...</a>
+          </x-breadcrumb>
+        </x-title>
+        <x-descr>
+          <p>The ACME.js library has never been easier to implement! All you have to do is import your copy of ACME.js, and start writing your game!</p>
+        </x-descr>
+      </x-panel>
+      <x-panel>
+        <x-title>
+          <h1>Documentation</h1>
+          <x-breadcrumb>
+            <a href = "docs.htm">Read more ...</a>
+          </x-breadcrumb>
+        </x-title>
+        <x-descr>
+          <p>ACME is designed to make programming games easy.  This means, of course, that the library itself is rather complex.Fortunately, this documentation is here to throughly explain each interface provided by ACME...</p>
+        </x-descr>
+      </x-panel>
+      <x-panel>
+        <x-title>
+          <h1>Modules</h1>
+          <x-breadcrumb>
+            <a href = "modules.htm">Read more ...</a>
+          </x-breadcrumb>
+        </x-title>
+        <x-descr>
+          <p>The ACME Project is proud to introduce support for modules for the ACME.js library.  Modules can be imported via the built-in functionality, or by linking directly to a module script.  Custom modules may be writtin, as well, and should follow these guidelines...</p>
+        </x-descr>
+      </x-panel>
+    </x-page>
+
+    <!-- Auto-generate content -->
+    <x-footer></x-footer>
+  </body>
+</html>

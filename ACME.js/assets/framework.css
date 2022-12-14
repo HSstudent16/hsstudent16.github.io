@@ -1,0 +1,163 @@
+:root {
+  --accent: #f00;
+  --accent-back: #fff;
+  --accent-text: #000;
+  --text-light: #fff;
+  --text-dark: #000;
+  --back-light: #fff;
+  --back-dark: #444;
+  --link-light: #fff;
+  --link-dark: #000;
+  --disabled-link: #f00;
+}
+body {
+  background: darkgrey;
+  margin: 0;
+  user-select: none;
+}
+x-page {
+  width: 100%;
+  max-width: 1024px;
+  display: block;
+  padding: 0;
+  margin: auto;
+  background: var(--back-light);
+}
+x-full-panel {
+  height: 100vh;
+  display: block;
+}
+x-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+x-full-panel x-title {
+  width: fit-content;
+  background: none;
+}
+x-footer {
+  background: var(--back-dark);
+  color: var(--text-light);
+  display: block;
+  padding: 1em;
+  margin: 0;
+}
+x-footer x-link, x-footer a {
+  color: var(--link-light);
+}
+x-panel {
+  display: block;
+  margin: 4em 0;
+  padding: 1px 0;
+}
+x-nav {
+  background: var(--accent);
+  color: var(--text-light);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  z-index: 1;
+  margin: 0 0 2em 0;
+  padding: 0.5em;
+  box-sizing: border-box;
+  text-align: center;
+}
+x-dropdown {
+  display: block;
+  position: relative;
+  width: fit-content;
+}
+x-dropdown > x-dd-content {
+  backdrop-filter: blur(10px);
+  border: solid var(--accent) 0.2em;
+  display: block;
+  position: absolute;
+  top: 100%;
+  overflow: hidden;
+  width: max-content;
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease .2s;
+  padding: 0.1em;
+  border-radius: 0 0 0.5em 0.5em;
+  margin-top: 0.3em;
+  text-align: left;
+}
+x-dropdown:hover > x-dd-content, x-dropdown:focus-within > x-dd-content{
+  visibility: visible;
+  opacity: 1;
+}
+x-link, x-breadcrumb {
+  color: var(--link-dark);
+  text-decoration: none;
+  display: block;
+  padding: 0.5em;
+  cursor: pointer;
+}
+x-nav > x-link, x-nav > x-dropdown > x-link {
+  color: var(--link-light);
+}
+x-link > a, x-breadcrumb > a {
+  color: inherit;
+  text-decoration: inherit;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  cursor: inherit;
+}
+x-link[disabled] {
+  color: var(--disabled-link);
+  cursor: not-allowed
+}
+x-link[arrow] > a::before {
+  content: " ";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin: 0 1em 0 0.5em;
+  transform: rotate(45deg);
+  border-top: solid var(--accent) 0.25em;
+  border-right: solid var(--accent) 0.25em;
+  transition: margin ease .2s;
+}
+x-link:hover > a::before {
+  margin-right: 0.5em;
+  margin-left: 1em;
+}
+x-column {
+  width: fit-content;
+  max-width: 40%;
+  display: inline-block;
+  margin: 1em;
+}
+x-title {
+  width: 100%;
+  background: var(--accent-back);
+  color: var(-accent-text);
+  display: block;
+  padding: 1em 2em;
+  box-sizing: border-box;
+}
+x-descr {
+  margin: 2em;
+  display: block;
+  padding: 1px 0
+}
+x-title > * {
+  display: inline-block;
+}
+x-breadcrumb {
+  color: var(--accent);
+  font-size: 90%;
+  border-radius: 1em;
+  padding: 0;
+  margin: 0 0.5em;
+}
